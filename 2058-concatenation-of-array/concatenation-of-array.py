@@ -3,11 +3,9 @@ class Solution:
         
         arr = []
 
-        for i in range(2* len(nums)):
+        for i in range(len(nums)):
 
-            if i >= len(nums):
-                i = i - len(nums)
-
-            arr.append(nums[i])
+            arr.insert(i, nums[i])
+            arr.insert(len(nums) + i, nums[i])
 
         return arr
